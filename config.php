@@ -16,10 +16,9 @@ $urls = array(
 );
 
 //libs
-include_once('lib/app.php');
-include_once('lib/wmsmarty.php');
-include_once('lib/default_controller.php');
-include_once('lib/default_model.php');
-include_once('lib/loader.php');
+include('lib/app.php');
+include('lib/default_controller.php');
+include('lib/default_model.php');
+include('lib/loader.php');
 
 ?>

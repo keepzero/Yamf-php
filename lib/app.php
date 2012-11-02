@@ -61,7 +61,7 @@ class app {
             if (preg_match("/$regex/i", $path, $matches)) {
                 $found = true;
                     
-                include_once(ROOT_PATH . DS . APP_DIR . DS . "controllers" . DS . $class . "_controller.php");
+                include(ROOT_PATH . DS . APP_DIR . DS . "controllers" . DS . $class . "_controller.php");
                     
                 if (class_exists($class)) {
                     $obj = new $class;

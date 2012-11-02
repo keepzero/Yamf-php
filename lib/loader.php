@@ -40,7 +40,7 @@ class Loader {
         if(!isset($filename)) {
             $filename = strtolower($model_name) . '.php';
         }
-        include_once(MOD_PATH . DS . $filename);
+        include(MOD_PATH . DS . $filename);
         
         /* get instance of controller object */
         $controller = app::instance(null,'controller');

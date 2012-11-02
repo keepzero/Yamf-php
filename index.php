@@ -2,7 +2,7 @@
 //session_start();
 
 //load config
-include_once('config.php');
+include('config.php');
 
 //run your apps
 $myapp = new app($urls);
