@@ -55,6 +55,42 @@ class Loader {
         return true;
       
     }
+    
+    /**
+     * entity
+     *
+     * load a entity object
+     *
+     */ 
+    public function entity($entity_name, $entity_alias=null, $filename=null) {
+    
+        if(!isset($entity_alias))
+            $entity_alias = $entity_name;
+        
+        if(empty($entity_alias))
+            throw new Exception("Entity name cannot be empty");
+        
+        if(!isset($filename))
+            $filename = strtolower($entity_name) . '.php';
+        
+        include(ENT_PATH . DS . $filename);
+        
+        // todo
+        // Entity Class not instantiation default
+        //$controller = app::instance(null,'controller');
+        //$controller->$entity_alias = new $entity_name();
+            
+        if(isset($controller->$entity_alias))
+            return true;
+
+        return true;
+    }
+    
+    public function library() {
+    
+        // todo
+    
+    }
 }
 
 ?>
